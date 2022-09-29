@@ -1,0 +1,1 @@
+"Gabor-Replacement \n A repository with functions that can be used to replace the first-layer filters of the pretrained RGB-operating CNN networks with the Gabor and random filters. Additionally, some examples can be explored." 

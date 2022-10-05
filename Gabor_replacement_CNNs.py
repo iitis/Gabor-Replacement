@@ -28,7 +28,7 @@ def replace_CNN_filters_with_Gabor(model, gabor_bank, model_layer_index):
     """
     import numpy as np
     from sklearn.metrics.pairwise import cosine_similarity
-    
+#     print('hello')
     if (gabor_bank.shape[1] != gabor_bank.shape[2]) or (gabor_bank.shape[1] != 
                                                                       model.layers[model_layer_index].get_weights()[0].shape[1]):
         print('Given model and Gabor bank have incompatible shapes')
@@ -39,6 +39,7 @@ def replace_CNN_filters_with_Gabor(model, gabor_bank, model_layer_index):
     new_weights = []
     
     for i in range(0, num_of_filters):
+#         print(i)
         r = model.layers[model_layer_index].get_weights()[0][:,:,0,i]
         r = np.expand_dims(np.reshape(r, (r.shape[0] * r.shape[1])), axis=0)
         gabor_r = gabor_bank[np.argmax(cosine_similarity(r, gabor_filter_bank_for_similarity))]
@@ -60,10 +61,11 @@ def replace_CNN_filters_with_Gabor(model, gabor_bank, model_layer_index):
     new_weights = np.array(new_weights)
     new_weights = np.moveaxis(new_weights, 0, -1)
     
-    if len(model.layers[1].get_weights()) == 1:
+    if len(model.layers[model_layer_index].get_weights()) == 1:
         model.layers[model_layer_index].set_weights([new_weights])
     else:
-        bias = model.layers[1].get_weights()[1]
+#         print(model.layers[model_layer_index].get_weights()[1])
+        bias = model.layers[model_layer_index].get_weights()[1]
         model.layers[model_layer_index].set_weights([new_weights, bias])
     return model
 

@@ -13,5 +13,7 @@ A repository with functions that can be used to replace the first-layer filters 
 * **generate_matching_random_filter_bank**(gabor_filter_bank) - it generates a random filter bank of the same size as a generated Gabor filter bank (it camn be used as a baseline for performance comparison)
 * **replace_CNN_filters_with_Gabor**(model, gabor_bank, model_layer_index) - it replaces the first-layer filters (index of the first conv layer should be given as a third parameter of the function) of a model given as a parameter with the most similar filters from the given filterbank (gabor_bank) according to Cosine Similarity
 
+We provide additional instructions on how to replicate the experiments described in our paper "On the similarity of Gabor filters and CNN first-layer filters" in file gabor_instructions.pdf.
+
 
 

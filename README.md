@@ -1,6 +1,6 @@
 # Replacing the CNN first-layer filters with the Gabor filters
 
-**NOTE:** This is a repository with methods, instructions and examples on how to use the components created for the purpose of paper **"Measuring the similarity of Gabor filters and CNN first-layer filters"**. We provide implementation of the vital software components and methods used in the study (**we plan to release our repository upon acceptance**). All of the methods are implemented  in such a way as to make them as flexible as possible not only for the easy reproduction of our experiments but hopefully also for other potential studies of other researchers. We made sure to add comments and guidelines on how to use our methods.  
+**NOTE:** This is a repository with methods, instructions and examples on how to use the components created for the purpose of paper **"Evaluating Convolutional Neural Networks via Measuring Similarity of their first-layer filters and Gabor filters"**. We provide implementation of the vital software components and methods used in the study. All of the methods are implemented  in such a way as to make them as flexible as possible not only for the easy reproduction of our experiments but hopefully also for other potential studies of other researchers. We made sure to add comments and guidelines on how to use our methods.  
 
 We present a repository with functions that can be used to replace the first-layer filters of the pretrained RGB-operating CNN networks with the Gabor or random filters. Additionally, some examples can be explored.
 
